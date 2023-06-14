@@ -1,1 +1,0 @@
-web: java -jar target/JiraConsumer-1.0-SNAPSHOT.jar
