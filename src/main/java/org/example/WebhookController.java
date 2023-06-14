@@ -1,6 +1,7 @@
 package org.example;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,4 +17,5 @@ public class WebhookController {
         // Optionally, you can return a response to Jira if required
         return ResponseEntity.ok().build();
     }
+
 }
