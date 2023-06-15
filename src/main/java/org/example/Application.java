@@ -15,6 +15,13 @@ public class Application {
         return "Hello World!";
     }
 
+    @RequestMapping("/task")
+    @ResponseBody
+    String getTask() {
+        return "Hello World!";
+    }
+
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
