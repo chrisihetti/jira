@@ -31,9 +31,9 @@ public class WebhookController {
             JsonNode issue = node.get("issue");
 
             // Print the formatted JSON string
-            logger.info(json);
+            //logger.info(json);
             logger.info(issue.get("key").toPrettyString());
-            logger.info(node.get("changelog").toPrettyString());
+            logger.info(node.get("transition").toPrettyString());
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();
