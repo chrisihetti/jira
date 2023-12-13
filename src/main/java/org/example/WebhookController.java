@@ -27,10 +27,11 @@ public class WebhookController {
         try {
             // Convert the object to JSON string
             String json = objectMapper.writeValueAsString(payload);
-            JsonNode node = objectMapper.readTree(json);
+            JsonNode node = objectMapper.readTree(payload);
             JsonNode issue = node.get("issue");
 
             // Print the formatted JSON string
+            logger.info(json);
             logger.info(issue.toPrettyString());
 
         } catch (JsonProcessingException e) {
