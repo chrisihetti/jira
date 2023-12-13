@@ -1,6 +1,7 @@
 package org.example;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,7 @@ public class WebhookController {
         try {
             // Convert the object to JSON string
             String json = objectMapper.writeValueAsString(payload);
-
+            JsonNode node = objectMapper.readTree(json);
             // Print the formatted JSON string
             System.out.println(json);
         } catch (JsonProcessingException e) {
